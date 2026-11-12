@@ -80,7 +80,8 @@ main:focus { outline: none; }
 
 /* ---------- Cabeçalho: o letreiro ---------- */
 .site-header { position: sticky; top: 0; z-index: 50; background: var(--bar); color: #fff; }
-.header-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: var(--header-h); }
+.header-inner { display: flex; align-items: center; gap: 24px; min-height: var(--header-h); }
+.site-nav { margin-left: auto; }
 .brand { display: block; flex: none; }
 .brand img { height: 52px; width: auto; }
 .site-nav ul { list-style: none; margin: 0; padding: 0; display: flex; align-items: center; gap: 30px; }
@@ -274,6 +275,26 @@ textarea { min-height: 120px; resize: vertical; }
   .band .social-btn:hover { background: #fff; color: var(--ink); }
   .site-footer .social-btn:hover { background: var(--ink); color: #fff; }
 }
+
+/* ---------- Ícones dos apps (WhatsApp, TikTok, Instagram) ---------- */
+.app-icons { list-style: none; margin: 0; padding: 0; display: flex; align-items: center; gap: 12px; }
+.app-icons li { margin: 0; }
+.app-icons a { display: block; border-radius: 22%; transition: transform 160ms var(--ease-out); }
+.app-icons img { display: block; width: 100%; height: 100%; border-radius: 22%; }
+.app-icons a:active { transform: scale(0.94); }
+@media (hover: hover) and (pointer: fine) { .app-icons a:hover { transform: translateY(-2px); } .app-icons a:active { transform: scale(0.94); } }
+.header-icons { margin-left: 28px; }
+.header-icons a { width: 36px; height: 36px; box-shadow: 0 0 0 1px rgba(255,255,255,0.28); }
+.band-icons { margin-top: 20px; gap: 14px; }
+.band-icons a { width: 52px; height: 52px; box-shadow: 0 0 0 1px rgba(255,255,255,0.28); }
+.footer-icons { margin-top: 14px; }
+.footer-icons a { width: 44px; height: 44px; }
+.site-footer .footer-icons li a { padding: 0; min-height: 0; }
+@media (max-width: 860px) {
+  .header-icons { margin-left: auto; margin-right: 12px; gap: 8px; }
+  .header-icons a { width: 34px; height: 34px; }
+}
+@media (max-width: 400px) { .header-icons a { width: 30px; height: 30px; } .header-icons { gap: 6px; margin-right: 8px; } }
 
 /* ---------- Barra de atalhos no celular ---------- */
 .actionbar { display: none; }
